@@ -24,11 +24,7 @@ var mutationObserver = new MutationObserver(function(mutations) {
         	//python source
         	var $src;
         	
-<<<<<<< HEAD
             //If src attribute is found, do a synchronous ajax to get 
-=======
-            //If `src` is found, do a synchronous ajax to get 
->>>>>>> refs/remotes/origin/master
         	//the code in order to execute it immediately
             if (node.src!=='') {
             	
@@ -77,9 +73,4 @@ var mutationObserver = new MutationObserver(function(mutations) {
 });
 
 //init observer, monitoring changes in all nodes of any level
-<<<<<<< HEAD
 mutationObserver.observe(document, { childList: true, subtree: true })
-=======
-mutationObserver.observe(el, { childList: true, subtree: true })
->>>>>>> refs/remotes/origin/master
-
