@@ -2,17 +2,21 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Python Script Test</title>
+<title>Pyscript Test Page</title>
+
+<!-- init brython and pyscript -->
 <script type="text/javascript" src="brython.js"></script>
 <script type="text/javascript" src="pyscript.js"></script>
 
+<!-- set javascript variable -->
 <script type="text/javascript">
-var variavel = 1;
+var value = 1;
 </script>
 
+<!-- python: print text and javascript variable  -->
 <script type="text/pyscript">
-print('teste de print!')
-print(variavel)
+print('Print Test!!!')
+print(value)
 </script>
 
 </head>
@@ -21,14 +25,17 @@ print(variavel)
    <div id="content">Conteúdo</div>
 </body>
 
+<!-- python: browser interaction -->
 <script type="text/pyscript">
 from _browser import doc, alert
-alert('Valor da variável: ' + str(variavel))
 
-lista = ['itens', 'da', 'lista']
-doc['content'].text = 'Conteúdo colocado com python: ' + ' '.join(lista)
+alert('Variable value: ' + str(value))
+
+mylist = ['items', 'of', 'mylist']
+doc['content'].text = 'Content from python: ' + ' '.join(mylist)
 </script>
 
-<script type="text/pyscript" src="teste.js"></script>
+<!-- python: execute external script  -->
+<script type="text/pyscript" src="myscript.py"></script>
 
 </html>
