@@ -4,4 +4,4 @@ d = {
 }
 
 for i in d:
-	print(i)
+	print(i, '=', d[i])
