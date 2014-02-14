@@ -24,7 +24,7 @@ var mutationObserver = new MutationObserver(function(mutations) {
         	//python source
         	var $src;
         	
-            //If `src` is found, do a synchronous ajax to get 
+            //If src attribute is found, do a synchronous ajax to get 
         	//the code in order to execute it immediately
             if (node.src!=='') {
             	
