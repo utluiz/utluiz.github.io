@@ -19,7 +19,7 @@ var mutationObserver = new MutationObserver(function(mutations) {
         if(node && node.tagName === 'SCRIPT' && node.type === 'text/pyscript') {
         	
         	//test log
-        	console.log('encontrado pyscript')
+        	console.log('Pyscript found!');
         	
         	//python source
         	var $src;
@@ -35,13 +35,13 @@ var mutationObserver = new MutationObserver(function(mutations) {
                 	// code for IE6, IE5
                     var $xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
                 }
-                $xmlhttp.open('GET', node.src, false)
-                $xmlhttp.send()
+                $xmlhttp.open('GET', node.src, false);
+                $xmlhttp.send();
                 if ($xmlhttp.readyState === 4 && $xmlhttp.status === 200) {
-                    $src = $xmlhttp.responseText
+                    $src = $xmlhttp.responseText;
                 }
                 if ($src === undefined) { // houston, we have a problem!!!
-                    console.log('Erro ao carregar script: ' + node.src)
+                    console.log('Error loading pyscript: ' + node.src);
                     return;
                 }
                 
@@ -73,4 +73,4 @@ var mutationObserver = new MutationObserver(function(mutations) {
 });
 
 //init observer, monitoring changes in all nodes of any level
-mutationObserver.observe(document, { childList: true, subtree: true })
+mutationObserver.observe(document, { childList: true, subtree: true });
